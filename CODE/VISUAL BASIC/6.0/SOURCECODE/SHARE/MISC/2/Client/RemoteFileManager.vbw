@@ -1,0 +1,12 @@
+ModStartUp = 0, 0, 0, 0, C
+Button = 0, 0, 0, 0, C, 44, 58, 561, 504, C
+ModSession = 0, 0, 0, 0, C
+frmMain = 154, 203, 671, 649, C, 22, 29, 708, 605, C
+frmAddressBook = 0, 0, 0, 0, C, 88, 116, 605, 562, C
+ModAddressBook = 0, 0, 0, 0, C
+frmAddAB = 0, 0, 0, 0, C, 110, 145, 627, 591, C
+FileReceiver = 0, 0, 0, 0, C, 132, 174, 649, 620, C
+FileSender = 0, 0, 0, 0, C, 154, 203, 671, 649, C
+frmUpload = 0, 0, 0, 0, C, 0, 0, 517, 446, C
+frmDownload = 0, 0, 0, 0, C, 22, 29, 539, 475, C
+frmFileInfo = 0, 0, 0, 0, C, 44, 58, 561, 504, C
