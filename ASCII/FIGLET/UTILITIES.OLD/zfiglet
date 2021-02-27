@@ -1,0 +1,47 @@
+#!/bin/sh -
+# zfiglet by Glenn Chappell <ggc@uiuc.edu>
+# 10 May 1995
+#
+# This program acts just like figlet, but uses compressed fonts. It
+# requires the fonts to reside in the directory named in the variable
+# ZFONTDIR. Be sure to set up this variable before using the script.
+# The font is uncompressed prior to being used, then is compressed again
+# afterwards.
+#
+# Note: zfiglet cannot use fonts that are not in the directory specified
+# by ZFONTDIR.  In particular, zfiglet ignores the "-d" command line
+# option.
+#
+# Change "compress" and "uncompress" to "gzip" and "gunzip" if you
+# prefer to use gzip compression.  For extra-compressed files, use
+# "gzip -9" and "gunzip".
+#
+# Usage: zfiglet [ (figlet options) ]
+
+# Set the following to the full pathname of your compressed font directory.
+ZFONTDIR="/home/symcom/chappell/zfonts"
+COMPRESSOR="compress"
+UNCOMPRESSOR="uncompress"
+
+# Set up PATH so figlet can be found
+DIRSAVE=`pwd`
+cd `(dirname "$0") 2>/dev/null`
+PATH="$PATH":`pwd`
+cd "$DIRSAVE"
+
+# Get figlet version
+FIGLETVERSION=`figlet -I1 2>/dev/null`
+if [ -z "$FIGLETVERSION" ]; then
+  FIGLETVERSION=20000
+fi
+
+if [ $FIGLETVERSION -lt 20100 ]; then
+  echo "`basename $0`: requires figlet 2.1 or later" >&2
+  exit 1
+fi
+
+FONT=$ZFONTDIR/`figlet $* -I3 2>/dev/null`.flf
+$UNCOMPRESSOR $FONT 2>/dev/null
+figlet $* -f $FONT
+$COMPRESSOR $FONT 2>/dev/null
+

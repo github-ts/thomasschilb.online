@@ -1,0 +1,99 @@
+     _____ _       _      _              ___  ____    ______
+    |  ___(_) __ _| | ___| |_           / _ \/ ___|  / /___ \
+    | |_  | |/ _` | |/ _ \ __|  _____  | | | \___ \ / /  __) |
+    |  _| | | (_| | |  __/ |_  |_____| | |_| |___) / /  / __/
+    |_|   |_|\__, |_|\___|\__|          \___/|____/_/  |_____|
+             |___/
+       ’‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘“
+       œœœ What is this? œœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœ
+       ”‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘•
+        Most mailers and newsreaded use a monospaced font -- figlet output
+        looks best when viewed with one, although modifications to the
+        ouput can be made.  I recommend viewing this file with a
+        monospaced font.  In the E editor, just go under Options to Set
+        Font.  In EPM, use the settings notebook.  In other editors,
+        there is probably also a way :-)
+
+
+        This is the OS/2 port of figlet version 2.2, a  neat tool started
+        by Glenn Chappell and Ian Chai, and now by John Cowan,
+        to produce impressive looking lettering easily.  For example,
+        it took me only a couple of seconds to make the title
+        for this file.  The complete directions are in the file
+        FIGLET.INF (type view figlet.inf from the command line)
+        so  this README will only address issues relating to the OS/2 port
+        of the program.
+
+       ’‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘“
+       œœœ OS/2 Specificities œœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœ
+       ”‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘•
+        The end of file signal in OS/2 is ^Z (control-Z).  When you are
+        typing input for figlet from the console,  just type ^Z and ENTER
+        to finish.
+
+        The default location for figlet fonts is .\FONTS but this
+        can be overridden by the -d switch.
+
+       ’‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘“
+       œœœ Displaying Fonts œœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœ
+       ”‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘•
+        A couple  of  REXX  files, SHOWALL.CMD and SHOWONE.CMD,
+        have been included to help you choose which font to use for your text.
+        The text used is from a file named TEST.TXT (which you can modify with
+        any text editor). Just type SHOWALL and the command file will then
+        cycle through all of the figlet fonts in the .\fonts directory
+        displaying the contents of TEST.TXT in that font and then pausing
+        so that you can look at it.   It would be easy for you to modify the
+        command files so that the  output  is  redirected to a printer or to
+        add  switches  to control figlet features.
+
+       ’‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘“
+       œœœ Internet Resources œœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœ
+       ”‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘•
+        The  "official"   home of figlet sources,  executables  for  many
+        platforms and fonts is
+
+        ftp://ftp.nicoh.com/pub/figlet
+
+        and the web page is
+
+        http://st-www.cs.uiuc.edu/~chai/figlet.html
+
+        Look  there for any updates to the program.   The best collection
+        of figlet fonts (well over 100) I  have seen is  in the ASCII art
+        archive  maintained by the ScareCrow.   You can find  the  figlet
+        stuff in
+
+        ftp://ftp.wwa.com/pub/ScareCrow/Figlet
+
+       ’‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘“
+       œœœ Acknowledgements œœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœœ
+       ”‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘‘•
+       All of the kudos for this program should go to John Cowan,
+       Glenn Chappell and Ian  Chai; I just  did a rather simple
+       port  to  the  OS/2  environment and added the OS/2
+       command files.   You should send your thanks, inquiries
+       and bug reports to
+
+        figlet@uiuc.edu
+
+       I did spend quite a bit of time formatting the manual files into
+       OS/2 INF files, so if you find any formating errors (not content)
+       please email me at <northrup@bright.net>.  Thanks.
+
+        This readme was modified from the readme.dos done for the DOS port
+        by William Luitje (luitje@m-net.arbornet.org) on 7 September,
+        1995.
+
+    Jim Northrup
+    northrup@bright.net
+    31 May, 1997
+
+Note: I took over the maintainence of FIGlet for OS/2 after the release of
+version 2.2.  This file should have come in a zip distribution labeled
+figletos2-22a.zip  It is identical to the previous 2.2 distribution with the
+following exceptions:
+  * Small modifications in the REXX command files.
+  * Porting of manual files to OS/2 INF format.
+  * Small documentation changes to reflect the two above changes.
+

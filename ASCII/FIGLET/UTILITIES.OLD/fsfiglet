@@ -1,0 +1,49 @@
+#!/usr/bin/perl
+
+# fsfiglet -- font switching front end to figlet
+#
+# Copyright Daniel Simmons and Idaho State University 1993.
+# Permission is here by granted to use fsfiglet and modify figlet without
+# cost.
+#
+# USAGE:
+#
+#      fsfiglet [-p] [-c] file file ...
+#      | fsfiglet [-p] [-c]
+#
+# The -p and -c options (if specified) are just passed on to figlet.
+# The input will default to the standard font, but you may switch
+# fonts anywhere along the way by inserting a line of the format:
+#
+#      %% <fontname>
+#
+# (The %% must be at the beginning of a line.)
+
+require "getopts.pl";
+&Getopts('pc');
+$args .= " -p" if $opt_p;
+$args .= " -c" if $opt_c;
+
+$line = 0;
+$font[1] = "standard";
+
+while (<>)
+{
+    if (/^%%\s+(\S+)\s*$/)
+    {
+        $line++;
+        $font[$line] = $1;
+    }
+    else
+    {
+        $line++ if $line == 0;
+        $text[$line] .= $_;
+    }
+}
+
+for ($i = 1; $i <= $line; $i++)
+{
+    open (FIGLET, "|figlet $args -f $font[$i]");
+    print FIGLET $text[$i];
+    close (FIGLET);
+}
