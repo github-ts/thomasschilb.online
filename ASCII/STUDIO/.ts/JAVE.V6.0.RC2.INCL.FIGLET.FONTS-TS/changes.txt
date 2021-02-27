@@ -1,0 +1,291 @@
+ 6.0 RC2:
+ - Brushed up the camelizer dialog with a new dialog icon and improved descriptions.
+
+ - Brushed up the clipart dialogs and fixed some bugs there.
+
+ - Decreased memory usage for animated GIF export. So there should be no more OutOfMemoryErrors
+   when exporting large animations.
+
+ - New export dialog (Menu "File" > "Export..." and in the toolbar)
+   combining the old "export result" and "ascii2gif" dialogs.
+
+ - Some users complained about problems with the file chooser dialogs. There seem to be some issues
+   with the current JRE (e.g. http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6578753).
+   So I decided to add an options to switch to the "native" file chooser
+   implementation ("View" > "Preferences..." > "Advanced" > "Use native file chooser dialog").
+   Using the native file chooser has some consequences:
+     - Advantages:
+        - much faster
+        - same functions and look&feel as in other applications
+     - Disadvantages:
+        - the filter combobox for file types always shows *.* instead of
+          dedicated types actually supported
+        - the dialog appears in the top left corner instead of centered to
+          the application
+
+ - Decoupled color scheme settings: You can configure a default color scheme in
+   "View" > "Preferences..." > "General" which will be applied to new documents. Each open
+   document can have it individual color scheme, adjustable via "View" > "Color".
+
+ - Bugfix: JavE did not start on some linux systems.
+
+ - Bugfix: CPU consumption was high when moving the mouse on the screen.
+
+ - Bugfix: In text mode, sometimes the cursor was not displayed correctly and artifacts where left
+   on the screen.
+
+ - Bugfix: The Ascii animation player Applet did not show the first frame after startup.
+
+ - Bugfix: The selection tool created new threads each time the tool was switched.
+
+ - Separated disy-commons.jar from jave.jar for the upcoming release of disy-commons as new
+   open source library by disy Informationssysteme GmbH (http://www.disy.net).
+
+ - Added a file jave.bat to maybe make it a bit easier for Windows users to start the application.
+
+ - Decreased the download archive size a bit by removing tests and demos from the binary.
+
+ 6.0 RC1:
+
+ - When starting up JavE, there is now a "Quick Start" dialog for choosing one of the popular
+   features of JavE.
+
+ - Updated the FIGlet fonts library to version 4.0
+
+ - Improved and extended preferences dialog (menu "View" > "Preferences...")
+
+ - Improved behavior when dropping a selection outside the document bounds:
+    - By default, on text editors the document is being resized automatically
+    - By default, on animation editors the document is not being resized automatically
+    - This can be adjusted independently for text and animation editor in the preferences dialog
+      (menu "View" > "Preferences...")
+    - When auto resize is enabled for animations, the resize operation will now resize all frames,
+      in order to have the frames properly aligned.
+
+ - Improved Mac Os X integration. Many thanks to Zak for testing!
+
+ - From the 3d renderer (menu "Special" > "Render 3d") animations are directly opened in the
+   animation editor.
+
+ - Updated the program icon to have colors (like the JavE logo)
+
+ - JavE now supports Drag'n'Drop for opening files. Just drop a file on the application to open it.
+
+ - When opening an image file instead of opening the image2ascii converter the user is now
+   asked what to do: Image2Ascii Conversion, Camelizer or Using the image as Watermark
+
+ - Fixed inconsistency in file dialogs for images: Now every file chooser offers the same set
+   of image formats.
+
+ - Brushed up the camelizer dialog.
+
+ - In the animation export wizard the initial output file is filled in automatically.
+
+ - JavE now uses the new Splash-Screen functionality in Java SE 6 in order to show the splash
+   screen much earlier.
+
+ - Brushed up the Image2Ascii conversion dialog a bit.
+
+ - Opening the Image2Ascii converter for the first time automatically opens the file chooser
+   for choosing the image file.
+
+ - The color scheme settings (Menu "View" > "Color") are now respected in the Image2Ascii converter.
+
+ - The color scheme settings (Menu "View" > "Color") are now remembered when restarting JavE.
+
+ - Moved button for tool options dialog to the status bar. When closing the dialog, you will
+   see a little animation to help remembering, where the dialog can be reactivated.
+
+ - Bugfix: "Convert 'Making Of' to Animation" caused an error when the document had not yet been
+   edited.
+
+ - Bugfix: The tool "Freehand Algorithmic" broke from M7 to RC0.
+
+ 6.0 RC0:
+ - Added a JRE check at startup in order to report outdated JREs as error. The check is
+   even JRE 1.1 compatible. So migrating from JavE 5 should be a bit easier.
+
+ - New Java Runtime Environment (JRE) requirements: 1.6.0 or greater required to run JavE
+   (this is mainly because the underlying library disy-commons for the user interface has
+   been updated).
+
+ - Bugfix: Version check (menu "Help" > "Check for Updates") did not work on some systems.
+
+ - Lots of other minor improvements and bugfixes.
+
+ 6.0 i20070819:
+
+ - New image2ascii algorithm "3d" for converting monochrome images to
+ASCII Art like this:
+______________________________________________
+ __________________/\\\\\______________________
+  _______________/\\\\\\\\\\\\__________________
+   _____________/\\\\\\\\\\\\\\\\\_______________
+    ___________/\\\\\\\\\\\\/\\\\\\\\_____________
+     __________/\\\\\\\\\///\//\\\\\\\\____________
+      _________/\\\\\\\\\_____/\\\\\\\\\____________
+       _______/\\\\\\\\\\_____/\\\\\\\\\_____________
+        ______/\\\\\\\\\\___/\\\\\\\\\\\______________
+         _____\/\\\\\\\\\\/\\\\\\\\\\\\/_______________
+          _____/\\\\\\\\\\\\\\\\\\\\\\/_________________
+           ____/\\\\\\\\\\\\\\\\\\\\//___________________
+            ___\/\\\\\\\\\\\\\\\\\//______________________
+             ___/\\\\\\\\\\\\\////_________________________
+              __\/\\\\\\\\\///____________/\\\______________
+               __\/\\\\\\\\\_____________/\\\\\\\\\__________
+                __\/\\\\\\\\\________/\\\\\\\\\\\\\\\_________
+                 __\/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\__________
+                  __\/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\//___________
+                   __\//\\\\\\\\\\\\\\\\\\\\\\\\\\/______________
+                    ___\///\\\\\\\\\\\\\\\\\\\////________________
+                     _____\/\\\\\\\\\\\\\/////_____________________
+                      _____\/////////////___________________________
+                       ______________________________________________
+
+ - The experimental VT100-Viewer can now be accessed via menu
+   "Animation" > "Open VT Animation". The VT-Viewer has been included
+   with JavE for many versions, but it only could have been started from
+   the command line. You can use it for playing VT (Virtual Terminal,
+   VT100) animations. There is no editing, conversion or export to other
+   formats available yet.
+   Example animations are included in the distribution in the folder
+   /examples/vt/
+
+ - The distribution now contains a few example files for animations in the
+   /examples/ folder.
+
+ - Animation editor: Less important controls can be hidden
+(http://wiki.jave.de/index.php/Feature_request:More_Animation_Editor_Space)
+
+ - Animation editor: Added navigation buttons to toolbar
+
+ - Renamed "Mix Characters" checkbox to "Merge Characters" to better
+   reflect its meaning.
+
+ - Tweaked user interface a bit (splash screen, about dialog, toolbar
+   buttons, colors, etc)
+
+ - Bugfix: SWF animation export respects actual frame size
+
+ - Bugfix: Exception caused by double clicking outside the document when
+   the text tool is active.
+
+ - Bugfix: Hitting the save button on an animation editor will save the
+   animation, not only a single frame. Also: Removed the "Save" and
+   "Save As..." buttons from the animation menu (since they only
+   duplicated the ones from the file menu).
+
+ 6.0M7 (4th December 2005):
+
+ - Moved the mouse characters panel from the status bar to the tool options dialog.
+   So mouse characters assigned to left/right mouse buttons can now be adjusted only
+   where it makes sense to do so.
+
+ - Dynamic font greyscale tables for Image2Ascii converter
+     When converting using a greyscale algorithm, the greyscale table for the
+     current display font can now be computed automatically.
+     This makes it easy to use special fonts (e.g. symbol fonts) for image2ascii
+     conversion, where there are no predefined greyscale tables available for.
+     Note that the predefined tables usually leed to a better conversion result,
+     since they are manually optimized.
+
+ - Macromedia Flash File (SWF) export from Ascii-animations
+     Requires the free MTASC compiler (http://www.mtasc.org) to be installed
+     (tested with 1.11 on Windows 2000, should work on other systems, too).
+     The path to the compiler binary must be specified on the export options page
+     for SWF export
+
+ - Added tool tips in order to somewhat explain the difference between generic and algorithmic tools.
+
+ - Added a new example 'key' to the 3D rendering tool - many thanks to Adam Robbins.
+
+ - Bugfix: Exception with using TextTool
+
+ - Bugfix: Problems saving/loading cliparts
+
+ - Lots of other minor improvements and bugfixes, brushed up some dialogs
+
+
+ 6.0M6 (19th June 2005):
+ - New font chooser for display font. It is in the menu "View", "Display font..." and you can
+   use it to select any true type font installed on your system.
+   The font will be used for the editors, for the preview in
+   the image2ascii converter and the FIGlet editor. It will
+   also be used as default font for GIF export.
+ - Reduced startup time, reduced system resources for crash recovery
+ - Java ImageIO API is used for loading image files. So JavE now supports all image file formats
+   that are supported by the Java runtime you have installed.
+ - Replaced the old FIGlet font export assistant by a new wizard implementation.
+ - Cliparts are now sorted by name
+ - Brushed up some icons, added icons to more menu items
+ - Brushed up dialog for adding current selection as new clipart
+ - Improved the Steganogram feature and added some help text (Image2Ascii Converter
+   with the 'Gradient' converting algorithm / menu "'Special', 'Decode Steganogram')
+ - Changed the about dialog to be an ordinary dialog with close button
+ - Added CeeJay's Gradient: .:%oO$8@#M
+ - Added icons to the fill style chooser in the fill tool options dialog
+ - Bugfix: High CPU load when closing asciimation player in looped mode
+ - Bugfix: Error when opening fractals editor
+ - Bugfix: JavE did not find its configuration files when not being run from installation folder
+ - Bugfix: JavE player applet was not JDK1.4 compatible
+ - Bugfix: FIGlet font export assistant did not start
+ - Bugfix: Games (AscTris/Labyrinth) did not get keyboard focus when started
+ - Distribution: Moved icons from root folder to separate icons folder
+ - Distribution: Added Alberto Schianos cool folder icon (icons folder)
+
+ 6.0M5:
+ - In the new batch conversion wizard in the image2ascii converter you can now choose the source
+   image files
+ - Improved animation editor: More buttons, more icons, more context menues
+ - Cropping (Menu Edit->Crop) in animation editor crops all frames
+ - Resize Document (Menu Edit->Resize Document) in animation editor resizes all frames
+ - New export wizard for animations. 'Loop' option can be configured for animated GIFs and JavaScript
+ - Improved JavaScript player for animation export. Player controls are now optional.
+ - Added Java applet export (JavEPlayer) to animation export wizard.
+ - New dialog for animation properties http://www.jave.de/developer/animationproperties60m5.png
+ - Removed the capability of animation frames having a specific frame duration and color
+   for each frame. Those are now settings for an animation.
+ - Bugfix: Frame title updated correctly to the current active editor
+ - Bugfix: Animation properties frame duration/color was not saved/loaded
+ - Bugfix: Animation GIF export produced black images
+
+ 6.0M4:
+ - Editor windows are now arranged as tabs.
+ - Integrated animation editor into the main editor window
+ - ActionScript export for the animation editor
+ - Added Icons to some of the Image2Ascii algorithms
+ - Added Icons to trasform, rotate menu items
+ - Online version check (menu 'Help' -> 'Check for Updates')
+ - Contains all fonts from the FIGlet fonts library
+ - Bugfix: Controls in Image2Ascii Dialog from appearing on other tabs with JRE1.4
+
+ 6.0M3:
+ - Rulers for the editor window (optional)
+ - Brushed up the animation player a bit - will be continued in M4
+ - First version of Asciimation import: Scrollbar animations as well as
+   raw text animations can be imported as movie (Menu "File" ->
+   "Import")
+ - Tool Options Dialog: Visibility can be toggled by menu item and
+   toolbar button
+ - JavE remembers grid visible/not visible and other settings
+ - Lots of critical bugfixes and internal code cleanup
+
+ 6.0M2:
+
+ - Replaced the old FIGlet dialog by the new one from my JFIGlet project
+ - User preferences are no longer saved into the jave.ini file. The Java Preferences API
+   is used now, which will for example write the preferences to the registry on Windows systems.
+ - Improved look and feel on most systems (by switching from AWT to Swing)
+ - All tools support automatic scrolling when the mouse cursor is dragged outside the visible
+   part of the document.
+ - Improved layout and controls in most dialogs
+ - Menubar contains icons
+ - Increased performance for large documents
+ - Auxiliary lines tool simplificated a lot.
+ - Lots of changes to the software internals.
+
+ 6.0M1:
+
+ - Improved layout and controls in most dialogs
+ - Improved the "Thumbnail Browser" - it's now more like a file open dialog with preview
+   should work well on Windows, has not been testen on Linux or other systems.

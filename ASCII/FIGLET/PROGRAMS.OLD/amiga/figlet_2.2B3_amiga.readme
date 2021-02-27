@@ -1,0 +1,9 @@
+Short: Amiga Port of figlet 2.2B3
+Porter: kbrierly@ottime.chi.il.us
+Date: Nov 15, 1996
+
+This is a quick port of figlet 2.2B3 to amiga.
+It requires ixemul.library to function. 
+It was compiled with ixemul version 45.0
+
+No porting required BTW, just ran GCC on it.

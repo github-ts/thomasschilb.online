@@ -1,0 +1,61 @@
+Main port: 7080
+File download port: 8070
+File upload port: 7807
+
+Packet delimeter: "///"
+EoP (end of packet): "**"
+
+Client:
+
+	Get drives: "GET"/"Drives"
+	Change directory: "CHG"/Directory
+	Delete file: "DEL"/"File"/File path
+	Remove directory: "RMD"/Directory
+	Get file information: "FIN"/File path
+	Execute file: "EXE"/File path
+	Download file: "DOW"/File path (open receiver socket)
+	Upload file: "UPL"/File name/File size/Destination path
+	Prevent timeout: "TMO"/"P_T_O"
+
+Server:
+
+	Get drives: "GET"/"Drives"/Drive1|Drive2|Drive3
+	Change directory:
+		- Successfull: "CHG"/Directory/D*?*Folder1|F*?*File1*123|F*?*File2*123
+		- Folder doesn't exist: "CHG"/"Directory"/"NonExist"
+	Delete file:
+		- Error "DEL"/"File"/"Error"/Error description
+		- File doesn't exist: "DEL"/"File"/"NonExist"
+		- Successful: "DEL"/"File"/"Success"
+	Get file information:
+		- File doesn't exist: "FIN"/"NonExist"
+		- File is empty: "FIN"/"Empty"
+		- File information: "FIN"/File name/File path/File size
+	Execute file:
+		- Error: "EXE"/"Error"/Error description
+		- Doesn't exist: "EXE"/"NonExist"
+		- Executed: "EXE"/"Executed"
+	Download file:
+		- File is empty: "DOW"/"Empty"
+		- File doesn't exist: "DOW"/"NonExist"
+		- Ready: "DOW"/"Ready" (connect to client)
+	Upload file:
+		- Path doesn't exist: "UPL"/"NonExist"
+		- Ready: "UPL"/"Ready" (open receiver socket) - (client connects)
+	Remove directory:
+		- Path doesn't exist: "RMD"/"NonExist"
+		- Error: "RMD"/"Error"/Error description
+		- Removed: "RMD"/"Removed"
+	Prevent timeout: "TMO"/"P_T_O"
+
+Types:
+
+	"GET" - Get drives
+	"CHG" - Change directory
+	"DEL" - Delete file
+	"FIN" - Get file information
+	"EXE" - Execute file
+	"DOW" - Download file
+	"UPL" - Upload file
+	"RMD" - Remove directory
+	"TMO" - Prevent timeout

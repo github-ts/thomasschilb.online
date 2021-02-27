@@ -1,0 +1,40 @@
+From owner-figlet-l@VMD.CSO.UIUC.EDU Mon Jul 17 16:32:56 1995
+Date:         Mon, 17 Jul 1995 16:27:20 -0500
+Reply-To: "Discussions about the multi-font large-letter program,              FIGLET." <FIGLET-L@VMD.CSO.UIUC.EDU>
+Sender: "Discussions about the multi-font large-letter program,              FIGLET." <FIGLET-L@VMD.CSO.UIUC.EDU>
+From: Roger Espel Llima <espel@CLIPPER.ENS.FR>
+Subject:      Re: Patches: figlet and compressed font files?
+To: Multiple recipients of list FIGLET-L <FIGLET-L@VMD.CSO.UIUC.EDU>
+
+>> Tony Nugent <T.Nugent@SCT.GU.EDU.AU> writes
+>> >Anyway, a while ago there were some patches distributed here
+>> >that allowed figlet to work with compressed font files.
+>>
+>> Not quite. We've never distributed any patches for figlet. What we do
+>> have is a Unix shell script, called "zfiglet", that handles
+>> compressed figlet font files.
+>>
+>> To use it (Unix only): save it to a file (called "zfiglet") and make
+>> the file executable. Make a new directory for compressed fonts, put
+>> your fonts in this directory, and compress them. Put the name of this
+>> directory in the appropriate place in zfiglet (see the code for
+>> instructions). Then use zfiglet just as you'd use figlet.
+
+[ code deleted ]
+
+The problem with this code is (other than it's way less efficient than a
+patch to figlet to make it read the compressed files) that it needs
+write access to the fonts. Works if you have figlet on your own dir, but
+not for a system installation.
+
+I posted long ago (like 4 months ago) some patches for figlet to make
+it read compressed fonts. They're simple and work well, but since
+apparently they didn't get anyone very excited here, I have the
+patched version up on http://www.eleves.ens.fr:8080/home/espel/index.html
+
+--
+e-mail: roger.espel.llima@ens.fr                     IRC: orabidoo
+"I repeat myself when under stress, I repeat myself when under stress,
+ I repeat myself when under stress, I repeat myself when under stress"
+                   King Crimson, _Indiscipline_
+

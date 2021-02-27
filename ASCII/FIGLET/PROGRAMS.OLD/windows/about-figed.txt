@@ -1,0 +1,131 @@
+From - Tue Jun  6 12:09:54 2000
+Received: from mo.egroups.com [207.138.41.166] by mx03 via mtad (2.6) 
+	with ESMTP id 357eFBBOY1423M03; Fri, 02 Jun 2000 01:40:50 GMT
+X-eGroups-Return: sentto-115198-71-959910043-ianchai=usa.net@returns.onelist.com
+Received: from [10.1.10.36] by mo.egroups.com with NNFMP; 02 Jun 2000 01:40:47 -0000
+Received: (qmail 19897 invoked from network); 2 Jun 2000 01:40:37 -0000
+Received: from unknown (10.1.10.27) by m2.onelist.org with QMQP; 2 Jun 2000 01:40:37 -0000
+Received: from unknown (HELO rmx441-mta.mail.com) (165.251.48.44) by mta2 with SMTP; 2 Jun 2000 01:40:37 -0000
+Received: from weba6.iname.net (weba6.iname.net [165.251.4.16]) by rmx441-mta.mail.com (8.9.3/8.9.3) with ESMTP id VAA21110; Thu, 1 Jun 2000 21:40:31 -0400 (EDT)
+Received: (from root@localhost) by weba6.iname.net (8.9.1a/8.9.2.Alpha2) id VAA09763; Thu, 1 Jun 2000 21:40:31 -0400 (EDT)
+Message-Id: <000601214031AK.17361@weba6.iname.net>
+To: figlet@egroups.com
+From: figwin@mindless.com
+MIME-Version: 1.0
+Mailing-List: list figlet@egroups.com; contact figlet-owner@egroups.com
+Delivered-To: mailing list figlet@egroups.com
+Precedence: bulk
+List-Unsubscribe: <mailto:figlet-unsubscribe@egroups.com>
+Date: Thu, 1 Jun 2000 21:40:31 -0400 (EDT)
+Reply-To: figlet@egroups.com
+Subject: [figlet] FIGfont Editor
+Content-Type: multipart/alternative;
+ boundary="c8Ww4g-JPLX2Yrhyvy8Rh4XNKMCRWpZ6y601l0L"
+X-Mozilla-Status: 8001
+X-Mozilla-Status2: 00000000
+X-UIDL: 357eFBBOY1423M03
+
+--c8Ww4g-JPLX2Yrhyvy8Rh4XNKMCRWpZ6y601l0L
+Content-Type: text/plain
+Content-Transfer-Encoding: 7bit
+
+Hi all.
+
+I wrote back, but it bounced back because mail comes through a forwarding address to me.  Here's what I wrote....
+
+-----------
+I guess it's time for me to come out of hiding.
+
+FIGfont Editor for Windows was never finished, and at some point its source
+code became corrupted, and backups were insufficient to prevent its loss.
+There is the teeniest tinyest chance that it still exists somewhere, but I
+don't have it.  I gave a "tell me what you think" copy to John Cowan and
+about 4 other people whose names I don't recall years ago.  I still have
+about 80% of its source code, and I may be able to piece it together again
+if I ever get around to it.  So if anyone has it, release it to the world!
+
+By the way, FIGFont Editor makes (or made) a pretty cool ASCII Art Editor
+too.  You draw letters with the mouse... Depending on the direction of the
+lines drawn, the character used to draw lines will be  /, \. |, or - or _,
+which it selects automatically.  You can also paint with other characters,
+or fill areas like a paint program, cut and copy rectangular areas with or
+without transparency (space character= transparent.)
+
+Also, FYI, I have modified FIGWin a little for the modern world... (Meaning
+the post-Windows 3.1 era.  It uses long filenames but it is still a 16-bit
+program because I am stubborn) but this too is a project I am not likely to
+finish soon.  Yes, I do still have its source code.
+
+Kosher?  Yes it's kosher!  :-) I would like to see it running again myself in fact! :-)
+
+I apologize for lack of input over the last two years or so, but I am still on the list, and I still read every mail.  I have continually had paying jobs for my evening time since then, and they must take priority.  Occasionally all projects are finished, and I have worked on FIGWin a bit, but the next version may not be ready for some time.  At one point I offered the source of FIGWin for someone else to finish, but I had no takers.
+
+By the way, I did send source code for both the editor and FIGWin to John Cowan at one point.  John, if you have that source I would be very happy.
+
+     - Paul
+
+---------------------------------------------------
+Get free personalized email at http://www.iname.com
+
+--c8Ww4g-JPLX2Yrhyvy8Rh4XNKMCRWpZ6y601l0L
+Content-Type: text/html; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+
+<html><body>
+<tt>
+Hi all.<BR>
+<BR>
+I wrote back, but it bounced back because mail comes through a forwarding address to me.&nbsp; Here's what I wrote....<BR>
+<BR>
+-----------<BR>
+I guess it's time for me to come out of hiding.<BR>
+<BR>
+FIGfont Editor for Windows was never finished, and at some point its source<BR>
+code became corrupted, and backups were insufficient to prevent its loss.<BR>
+There is the teeniest tinyest chance that it still exists somewhere, but I<BR>
+don't have it.&nbsp; I gave a &quot;tell me what you think&quot; copy to John Cowan and<BR>
+about 4 other people whose names I don't recall years ago.&nbsp; I still have<BR>
+about 80% of its source code, and I may be able to piece it together again<BR>
+if I ever get around to it.&nbsp; So if anyone has it, release it to the world!<BR>
+<BR>
+By the way, FIGFont Editor makes (or made) a pretty cool ASCII Art Editor<BR>
+too.&nbsp; You draw letters with the mouse... Depending on the direction of the<BR>
+lines drawn, the character used to draw lines will be&nbsp; /, \. |, or - or _,<BR>
+which it selects automatically.&nbsp; You can also paint with other characters,<BR>
+or fill areas like a paint program, cut and copy rectangular areas with or<BR>
+without transparency (space character= transparent.)<BR>
+<BR>
+Also, FYI, I have modified FIGWin a little for the modern world... (Meaning<BR>
+the post-Windows 3.1 era.&nbsp; It uses long filenames but it is still a 16-bit<BR>
+program because I am stubborn) but this too is a project I am not likely to<BR>
+finish soon.&nbsp; Yes, I do still have its source code.<BR>
+<BR>
+Kosher?&nbsp; Yes it's kosher!&nbsp; :-) I would like to see it running again myself in fact! :-)<BR>
+<BR>
+I apologize for lack of input over the last two years or so, but I am still on the list, and I still read every mail.&nbsp; I have continually had paying jobs for my evening time since then, and they must take priority.&nbsp; Occasionally all projects are finished, and I have worked on FIGWin a bit, but the next version may not be ready for some time.&nbsp; At one point I offered the source of FIGWin for someone else to finish, but I had no takers.<BR>
+<BR>
+By the way, I did send source code for both the editor and FIGWin to John Cowan at one point.&nbsp; John, if you have that source I would be very happy.<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp; - Paul<BR>
+<BR>
+---------------------------------------------------<BR>
+Get free personalized email at <a href="http://www.iname.com">http://www.iname.com</a><BR>
+</tt>
+
+<hr>
+<!-- |@|begin eGroups banner|@| runid: 3373 crid: 1701 -->
+<a target="_blank" href="http://click.egroups.com/1/3373/4/_/465278/_/959910043/"><center>
+<img width="468" height="60"
+  border="0"
+  alt=""
+  src="http://adimg.egroups.com/img/3373/4/_/465278/_/959910043/"></center><center><font color="black"></font></center></a>
+<!-- |@|end eGroups banner|@| -->
+<hr>
+<tt>
+FIGlet website: <a href="http://st-www.cs.uiuc.edu/users/chai/figlet.html">http://st-www.cs.uiuc.edu/users/chai/figlet.html</a></tt>
+<br>
+
+</body></html>
+
+--c8Ww4g-JPLX2Yrhyvy8Rh4XNKMCRWpZ6y601l0L--
+

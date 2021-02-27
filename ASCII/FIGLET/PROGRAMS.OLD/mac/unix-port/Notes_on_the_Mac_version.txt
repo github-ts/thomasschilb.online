@@ -1,0 +1,14 @@
+This is a *really* quick hack. I'm doing this because so many people have requested it, and yet nobody else has ported it to the Mac.
+
+I am a Mac user myself, but I always ran FIGlet on my UNIX host. I didn’t see the need for a Mac version, as I thought FIGlet is unnecessary on the Mac since we have nice fonts when using a Mac already and don’t have to resort to the FIGlet solution.
+
+However, it’s been pointed out that FIGlet is useful for Email and Usenet and if you do your Email with Eudora or something like that, you’d never run anything in a UNIX shell… Ok, so to satisfy y’all, here’s a really quick hack solution. If you’d like to do a better port, please do! Get the UNIX source from ftp.nicoh.com and when you’re done, drop me an email and I’ll be glad to make your port available in place of mine.
+
+Sorry, no nice Mac GUI, but at least you can run FIGlet and copy the thing over to Eudora and paste it there.
+
+God bless,
+	Ian Chai <chai@uiuc.edu>
+	2/19/97
+
+This port was compiled with THINK C and so portions © SYMATEC.
+Thanks to LINUX for getopt().

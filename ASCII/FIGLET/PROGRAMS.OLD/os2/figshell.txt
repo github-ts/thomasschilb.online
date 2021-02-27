@@ -1,0 +1,19 @@
+Archive Name: FIGSHELL.ZIP
+
+Author Name: Gregory Spath
+
+Author Email: gspath@epix.net
+
+Author Other (Web page etc..): http://www.epix.net/~gspath
+
+Operating System/Version: OS/2 2.x, OS/2 Warp
+
+Program Source:
+
+Replaces: FIGSHELL.ZIP
+
+Proposed directory for placement: wpsutil 
+
+Program Description (please do not exceed 47 characters):
+PM Shell for FIGLET...Big ASCII Lettering
+
